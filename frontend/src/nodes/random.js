@@ -1,7 +1,7 @@
 // inputNode.js
 
 import { useState } from "react";
-import { Handle, Position } from "reactflow";
+import { Position } from "reactflow";
 import { BaseNode } from "./baseNode";
 
 export const RandomNode = ({ id, data }) => {
@@ -35,7 +35,7 @@ export const RandomNode = ({ id, data }) => {
         Header={"Random"}
         inputlable={"Name"}
         inputvalue={currName}
-       
+    
         handleInputChange={handleNameChange}
         handler={handler}
       />

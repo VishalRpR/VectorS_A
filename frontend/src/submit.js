@@ -9,6 +9,9 @@ export const SubmitButton = () => {
 
   async function handleSubmit() {
     try {
+      console.log("Nodes: ", nodes);
+      console.log("Edges: ", edges);
+
       const response = await axios.post(
         "http://127.0.0.1:8000/pipelines/parse",
         {
@@ -26,7 +29,7 @@ export const SubmitButton = () => {
         - Is DAG: ${is_dag ? "Yes" : "No"}
       `);
     } catch (error) {
-      console.error("Error parsing pipeline:", error);
+      console.error("Error parsing pipeline:", error.response);
       alert(
         "Failed to analyze the pipeline. Please check the console for details."
       );
